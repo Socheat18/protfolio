@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Kantumruy+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.slick-slider {
+  /* Add the necessary styles to display horizontally */
+  display: flex;
+  flex-direction: row;
+}
+
+.d-carousel {
+  display: flex;
+  overflow: auto;
+  /* Allow horizontal overflow */
+  scroll-behavior: smooth;
+  /* Enable smooth scrolling */
+
+  /* Hide the scrollbar */
+  scrollbar-width: auto;
+  /* Firefox */
+  -ms-overflow-style: auto;
+  /* IE/Edge */
+}
+
+
+.global::-webkit-scrollbar{
+  display: none;
+}
+
+.local::-webkit-scrollbar{
+  display: none;
+}
+
+.d-carousel::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.d-carousel::-webkit-scrollbar-thumb {
+  background: red;
+}
+
+/* Customize the scrollbar for webkit-based browsers (Chrome and Safari) */
+/* Track (the area where the thumb moves) */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Width of the scrollbar */
+  /* Color of the thumb and the track (in that order) */
+  scrollbar-color: #4CAF50 #FFF;
+
+}
+
+/* Thumb (the draggable handle) */
+::-webkit-scrollbar-thumb {
+  background: #FF7342;
+  /* Color of the thumb */
+  border-radius: 6px;
+  /* Rounded corners for the thumb */
+  /* Customize the scrollbar for Firefox */
+  /* Width of the scrollbar */
+  scrollbar-width: thin;
+}
+
+
+.news::-webkit-scrollbar{
+  display: none
+}
+
+
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

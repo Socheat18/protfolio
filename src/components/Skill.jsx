@@ -11,26 +11,29 @@ import statsitc from "../assets/statistic.png";
 import Numpy from "../assets/Numpy.png";
 import PowerBI from "../assets/Power_BI.png";
 import Pandas from "../assets/Pandas_logo.png";
-
+import excel from "../assets/excel.png";
+import flask from "../assets/flask-logo.png";
+import postgresql from "../assets/Postgresql_elephant.png";
+import UX_UI from "../assets/UI-UX-Design.png";
 export default function Skill() {
   const data = [
     {
-      title: "java",
+      title: "Java",
       image: java,
       percentage: 90,
     },
     {
-      title: "python",
+      title: "Python",
       image: python,
       percentage: 100,
     },
     {
-      title: "html5",
+      title: "Html5",
       image: html5,
       percentage: 100,
     },
     {
-      title: "css",
+      title: "CSS",
       image: css,
       percentage: 100,
     },
@@ -40,10 +43,15 @@ export default function Skill() {
       percentage: 100,
     },
     {
-      title: "react js",
+      title: "React js",
       image: react,
       percentage: 100,
     },
+    {
+      title: "UX/UI Designer",
+      image: UX_UI,
+      percentage: 100,
+    }
   ];
 
   const data2 = [
@@ -72,6 +80,21 @@ export default function Skill() {
       image: statsitc,
       percentage: 100,
     },
+    {
+      title: "Advance Excel",
+      image: excel,
+      percentage: 100,
+    },
+    {
+      title: "Flask Restx",
+      image: flask,
+      percentage: 80,
+    },
+    {
+      title: "PostgreSQL",
+      image: postgresql,
+      percentage: 80,
+    }
   ];
   return (
     <>
@@ -80,8 +103,10 @@ export default function Skill() {
       </h1>
       <div className="grid xl:grid-cols-12 grid-cols-1 mt-10 font-QuickSand">
         <div className="col-span-5">
-          <h2 className="text-2xl text-start font-bold">Professional Skills</h2>
-          <p className="text-md  text-start mb-5">
+          <h2 className="xl:text-2xl text-xl text-start font-bold">
+            Professional Skills
+          </h2>
+          <p className="xl:text-md text-sm text-start mb-5">
             This is some course I study.
           </p>
           <div className="gap-10">
@@ -90,15 +115,15 @@ export default function Skill() {
                 <div className="flex justify-between items-end">
                   <div className="gap-5 flex justify-center items-center">
                     <div className="avatar">
-                      <div className="w-10 rounded-lg">
+                      <div className="xl:w-10 w-6 rounded-lg">
                         <img src={item.image} />
                       </div>
                     </div>
-                    <h3 className="text-center text-xl font-medium">
+                    <h3 className="text-center xl:text-xl text-md font-medium">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-xl">{item.percentage}%</p>
+                  <p className="xl:text-xl text-md">{item.percentage}%</p>
                 </div>
                 <progress
                   className="progress progress-primary w-full"
@@ -117,10 +142,10 @@ export default function Skill() {
           />
         </div>
       </div>
-      <h2 className="text-2xl text-start font-bold mt-10">
+      <h2 className="xl:text-2xl text-xl text-start font-bold mt-10">
         Professional Skills
       </h2>
-      <p className="text-md  text-start mb-5">This is some course I study.</p>
+      <p className="xl:text-md text-sm text-start mb-5">This is some course I study.</p>
       <div className="grid xl:grid-cols-12 grid-cols-1 mt-10 font-QuickSand">
         <div className="col-span-6 flex items-center justify-center">
           <img
@@ -136,15 +161,15 @@ export default function Skill() {
                 <div className="flex justify-between items-end">
                   <div className="gap-5 flex justify-center items-center">
                     <div className="avatar">
-                      <div className="w-10 rounded-lg">
+                      <div className="xl:w-10 w-6 rounded-lg">
                         <img src={item.image} />
                       </div>
                     </div>
-                    <h3 className="text-center text-xl font-medium">
+                    <h3 className="text-center xl:text-xl text-md font-medium">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-xl">{item.percentage}%</p>
+                  <p className="xl:text-xl text-md">{item.percentage}%</p>
                 </div>
                 <progress
                   className="progress progress-primary w-full"

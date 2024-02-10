@@ -30,23 +30,29 @@ export default function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Homepage</a>
+                <a>Home</a>
               </li>
               <li>
-                <a>Portfolio</a>
+                <a>Skill</a>
+              </li>
+              <li>
+                <a>Work</a>
               </li>
               <li>
                 <a>About</a>
               </li>
+              <li>
+                <a></a>
+              </li>
             </ul>
           </div>
         </div>
-        <div className="navbar-center gap-10 hidden">
-          <a className="text-md">Home</a>
-          <a className="text-md">Skill</a>
-          <a className="text-md">Work</a>
-          <a className="text-md">About</a>
-          <a className="text-md">Contact</a>
+        <div className="navbar-center gap-10">
+          <a className="text-md hidden xl:block">Home</a>
+          <a className="text-md hidden xl:block">Skill</a>
+          <a className="text-md hidden xl:block">Work</a>
+          <a className="text-md hidden xl:block">About</a>
+          <a className="text-md hidden xl:block">Contact</a>
         </div>
         <div className="navbar-end ">
           <div className="dropdown dropdown-end">

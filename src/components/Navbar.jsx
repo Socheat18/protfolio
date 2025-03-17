@@ -65,7 +65,7 @@ export default function Navbar() {
                 <img alt="Tailwind CSS Navbar component" src={mind} />
               </div>
             </div>
-            <ul
+            {/* <ul
               tabIndex={0}
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
@@ -81,7 +81,7 @@ export default function Navbar() {
               <li>
                 <a>Logout</a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

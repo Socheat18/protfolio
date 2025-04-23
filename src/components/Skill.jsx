@@ -1,11 +1,9 @@
-import data_analysis from "../assets/Data_Analytics.png";
 import js from "../assets/js.png";
 import java from "../assets/java.png";
 import html5 from "../assets/html-5.png";
 import python from "../assets/python.png";
 import css from "../assets/css-3.png";
 import react from "../assets/atom.png";
-import Ai_bigData from "../assets/AI_bigdata.png";
 import springBoot from "../assets/Spring Boot.png";
 import statsitc from "../assets/statistic.png";
 import Numpy from "../assets/Numpy.png";
@@ -17,125 +15,69 @@ import postgresql from "../assets/Postgresql_elephant.png";
 import UX_UI from "../assets/UI-UX-Design.png";
 
 export default function Skill() {
-  const data = [
-    { title: "Java", image: java, percentage: 90 },
-    { title: "Python", image: python, percentage: 100 },
-    { title: "Html5", image: html5, percentage: 100 },
-    { title: "CSS", image: css, percentage: 100 },
-    { title: "JavaScript", image: js, percentage: 100 },
-    { title: "React js", image: react, percentage: 100 },
-    { title: "UX/UI Designer", image: UX_UI, percentage: 100 },
-  ];
-
-  const data2 = [
-    { title: "Numpy", image: Numpy, percentage: 100 },
-    { title: "Basic Spring Boot", image: springBoot, percentage: 100 },
-    { title: "Pandas", image: Pandas, percentage: 100 },
-    { title: "Power BI", image: PowerBI, percentage: 100 },
-    { title: "Basic Statistics", image: statsitc, percentage: 100 },
-    { title: "Advance Excel", image: excel, percentage: 100 },
-    { title: "Flask Restx", image: flask, percentage: 80 },
-    { title: "PostgreSQL", image: postgresql, percentage: 80 },
+  const allSkills = [
+    { title: "Java", images: java, percentage: 90 },
+    { title: "Python", images: python, percentage: 100 },
+    { title: "HTML5", images: html5, percentage: 100 },
+    { title: "CSS", images: css, percentage: 100 },
+    { title: "JavaScript", images: js, percentage: 100 },
+    { title: "React JS", images: react, percentage: 100 },
+    { title: "Spring Boot", images: springBoot, percentage: 100 },
+    { title: "Flask", images: flask, percentage: 80 },
+    { title: "PostgreSQL", images: postgresql, percentage: 80 },
+    { title: "Numpy", images: Numpy, percentage: 100 },
+    { title: "Pandas", images: Pandas, percentage: 100 },
+    { title: "Power BI", images: PowerBI, percentage: 100 },
+    { title: "Excel", images: excel, percentage: 100 },
+    { title: "Statistics", images: statsitc, percentage: 100 },
+    { title: "UX/UI Design", images: UX_UI, percentage: 100 },
   ];
 
   return (
-    <>
-      {/* Section Header */}
-      <h1 className="xl:text-3xl text-2xl font-bold text-blue-700 text-center mt-10 underline font-QuickSand opacity-0 animate-fadeInUp">
-        Skill
-      </h1>
-
-      {/* Professional Skills */}
-      <div className="grid xl:grid-cols-12 grid-cols-1 mt-10 font-QuickSand">
-        <div className="col-span-5">
-          <h2 className="xl:text-2xl text-xl text-start font-bold opacity-0 animate-fadeInUp animation-delay-200">
-            Professional Skills
-          </h2>
-          <p className="xl:text-md text-sm text-start mb-5 opacity-0 animate-fadeInUp animation-delay-300">
-            These are some of the skills I've gained through my studies.
-          </p>
-          <div className="gap-10">
-            {data?.map((item, index) => (
-              <div
-                key={index}
-                className="bg-gray-100 p-4 rounded-md mt-5 hover:-translate-y-1 hover:scale-105 transition duration-200"
-              >
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-5">
-                    <div className="avatar">
-                      <div className="xl:w-12 w-8 rounded-lg">
-                        <img src={item.image} alt={item.title} />
-                      </div>
-                    </div>
-                    <h3 className="text-center xl:text-xl text-md font-medium">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <p className="xl:text-xl text-md">{item.percentage}%</p>
-                </div>
-                <progress
-                  className="progress progress-primary w-full mt-2"
-                  value={item.percentage}
-                  max="100"
-                ></progress>
-              </div>
-            ))}
+    <section id="skills" className="py-20 bg-white text-center">
+      <h2 className="text-4xl font-bold text-blue-700 mb-10">My Skills</h2>
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
+        {allSkills.map((skill, index) => (
+          <div
+            key={index}
+            className="bg-gray-100 p-6 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform"
+          >
+            <img
+              src={skill.images}
+              alt={skill.title}
+              className="w-12 h-12 mx-auto mb-4"
+            />
+            <h3 className="text-lg font-semibold mb-2">{skill.title}</h3>
+            <div className="relative w-20 h-20 mx-auto">
+              <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
+                <path
+                  className="text-gray-300"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  className="text-blue-500"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeDasharray={`${skill.percentage}, 100`}
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <span className="absolute inset-0 flex items-center justify-center text-blue-700 font-bold">
+                {skill.percentage}%
+              </span>
+            </div>
           </div>
-        </div>
-        <div className="col-span-6 flex items-center justify-center">
-          <img
-            src={data_analysis}
-            alt="Data Analysis"
-            className="w-[400px] h-max rounded-lg transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-200"
-          />
-        </div>
+        ))}
       </div>
-
-      {/* Additional Skills */}
-      <h2 className="xl:text-2xl text-xl text-start font-bold mt-10 opacity-0 animate-fadeInUp animation-delay-400">
-        Additional Skills
-      </h2>
-      <p className="xl:text-md text-sm text-start mb-5 opacity-0 animate-fadeInUp animation-delay-500">
-        Here are some additional skills I’ve mastered.
-      </p>
-      <div className="grid xl:grid-cols-12 grid-cols-1 mt-10 font-QuickSand">
-        <div className="col-span-6 flex items-center justify-center">
-          <img
-            src={Ai_bigData}
-            alt="AI Big Data"
-            className="w-[500px] h-max rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200"
-          />
-        </div>
-        <div className="col-span-6">
-          <div className="gap-10">
-            {data2?.map((item, index) => (
-              <div
-                key={index}
-                className="bg-gray-100 p-4 rounded-md mt-5 hover:-translate-y-1 hover:scale-105 transition duration-200"
-              >
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-5">
-                    <div className="avatar">
-                      <div className="xl:w-12 w-8 rounded-lg">
-                        <img src={item.image} alt={item.title} />
-                      </div>
-                    </div>
-                    <h3 className="text-center xl:text-xl text-md font-medium">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <p className="xl:text-xl text-md">{item.percentage}%</p>
-                </div>
-                <progress
-                  className="progress progress-primary w-full mt-2"
-                  value={item.percentage}
-                  max="100"
-                ></progress>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </>
+    </section>
   );
 }
+

@@ -2,34 +2,40 @@ import mannsocheat from "../assets/2. Mann Socheat.jpg";
 
 export default function Home() {
   return (
-    <div className="grid xl:grid-cols-12 grid-cols-1 justify-between items-center mt-10 font-QuickSand">
-      <div className="col-span-6">
-        {/* Text Animations */}
-        <h1 className="xl:text-[60px] text-2xl font-bold text-start opacity-0 animate-fadeInLeft">
-          Hello,
-        </h1>
-        <h1 className="xl:text-[60px] text-2xl font-bold text-start opacity-0 animate-fadeInLeft animation-delay-100">
-          I'am <span className="text-blue-700">Mann Socheat</span>
-        </h1>
-        <h1 className="xl:text-[60px] text-2xl font-bold text-start opacity-0 animate-fadeInLeft animation-delay-200">
-          I'm a Data Analytic
-        </h1>
-        <button className="btn btn-primary transition ease-in-out delay-150 hover:scale-110 duration-300 mt-5 opacity-0 animate-fadeInUp animation-delay-300">
-          Contact
-        </button>
-      </div>
-      <div className="col-span-5 flex items-end justify-center">
-        <div className="avatar xl:mt-0 mt-10">
-          {/* Image animation */}
-          <div className="xl:w-[400px] w-[300px] mask mask-hexagon transition-transform transform hover:-translate-y-1 hover:scale-110 duration-300">
+    <section id="home" className="py-20 bg-white font-QuickSand">
+      <div className="grid xl:grid-cols-12 grid-cols-1 items-center gap-10 max-w-7xl mx-auto px-4">
+        {/* Text Section */}
+        <div className="xl:col-span-6 space-y-4 opacity-0 animate-fadeInLeft">
+          <h1 className="text-4xl xl:text-6xl font-bold text-gray-800 leading-tight">
+            Hello, <br />
+            I’m <span className="text-blue-700">Mann Socheat</span>
+          </h1>
+          <h2 className="text-2xl xl:text-3xl font-semibold text-gray-600">
+            A Passionate Data Analyst & Full-Stack Enthusiast
+          </h2>
+          <p className="text-lg text-gray-600 mt-4">
+            I specialize in turning data into insights and ideas into code.
+            Currently diving deeper into full-stack dev & advanced analytics.
+          </p>
+          <a href="#contact">
+            <button className="btn btn-primary mt-6 hover:scale-105 transition duration-300">
+              Contact Me
+            </button>
+          </a>
+        </div>
+
+        {/* Image Section */}
+        <div className="xl:col-span-6 flex justify-center opacity-0 animate-fadeInUp animation-delay-300">
+          <div className="relative group">
             <img
               src={mannsocheat}
               alt="Mann Socheat"
-              className="opacity-0 animate-fadeInUp animation-delay-500"
+              className="w-[300px] xl:w-[400px] object-cover rounded-3xl shadow-xl transition-transform group-hover:-translate-y-1 group-hover:scale-105 duration-300"
             />
+            <div className="absolute inset-0 rounded-3xl bg-blue-600/20 opacity-0 group-hover:opacity-100 transition" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

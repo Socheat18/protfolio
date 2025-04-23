@@ -1,8 +1,9 @@
 import mind from "../assets/socheat.jpg";
+
 export default function Navbar() {
   return (
     <>
-      <div className="navbar bg-base-100 font-QuickSand">
+      <div className="navbar bg-base-100 font-QuickSand sticky top-0 z-50">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -29,32 +30,25 @@ export default function Navbar() {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Home</a>
-              </li>
-              <li>
-                <a>Skill</a>
-              </li>
-              <li>
-                <a>Work</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
-              <li>
-                <a></a>
-              </li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a></a></li>
             </ul>
           </div>
         </div>
+
         <div className="navbar-center gap-10">
-          <a className="text-md hidden xl:block">Home</a>
-          <a className="text-md hidden xl:block">Skill</a>
-          <a className="text-md hidden xl:block">Work</a>
-          <a className="text-md hidden xl:block">About</a>
-          <a className="text-md hidden xl:block">Contact</a>
+          <a className="text-md hidden xl:block" href="#home">Home</a>
+          <a className="text-md hidden xl:block" href="#about">About</a>
+          <a className="text-md hidden xl:block" href="#skills">Skills</a>
+          <a className="text-md hidden xl:block" href="#projects">Projects</a>
+          <a className="text-md hidden xl:block" href="#contact">Contact</a>
         </div>
-        <div className="navbar-end ">
+
+        <div className="navbar-end">
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
@@ -65,23 +59,6 @@ export default function Navbar() {
                 <img alt="Tailwind CSS Navbar component" src={mind} />
               </div>
             </div>
-            {/* <ul
-              tabIndex={0}
-              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul> */}
           </div>
         </div>
       </div>

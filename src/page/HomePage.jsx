@@ -1,9 +1,10 @@
 import About from "../components/About";
+import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Home from "../components/Home";
 import Navbar from "../components/Navbar";
+import Projects from "../components/Projects";
 import Skill from "../components/Skill";
-import Work from "../components/Work";
 
 export default function HomePage() {
   return (
@@ -13,7 +14,8 @@ export default function HomePage() {
           <Home />
           <About />
           <Skill/>
-          <Work/>
+          <Projects/>
+          <Contact/>
         <Footer />
       </div>
     </>
